@@ -1,0 +1,16 @@
+● apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─forking.conf
+   Active: active (running) since Mon 2018-03-26 13:40:29 GMT; 1h 24min ago
+  Process: 838 ExecStop=/etc/init.d/apache2 stop (code=exited, status=0/SUCCESS)
+  Process: 860 ExecStart=/etc/init.d/apache2 start (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/apache2.service
+           ├─876 /usr/sbin/apache2 -k start
+           ├─879 /usr/sbin/apache2 -k start
+           ├─880 /usr/sbin/apache2 -k start
+           └─881 /usr/sbin/apache2 -k start
+
+Mar 26 13:40:28 jessie systemd[1]: Starting LSB: Apache2 web server...
+Mar 26 13:40:29 jessie apache2[860]: Starting web server: apache2.
+Mar 26 13:40:29 jessie systemd[1]: Started LSB: Apache2 web server.
