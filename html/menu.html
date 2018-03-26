@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Menu</title>
+	</head>
+	<body>
+		<center>
+		<h1>Menu</h1>
+		<br/>
+		<hr/>
+		<br/>
+			<form>
+			DNS:
+			<input type="submit" value="Iniciar" name="iniciar">
+			<input type="submit" value="Parar" name="parar">
+			<input type="submit" value="Reiniciar" name="reiniciar"><br/><br/>
+			NAGIOS:
+			<input type="submit" value="Iniciar" name="iniciar">
+			<input type="submit" value="Parar" name="parar">
+			<input type="submit" value="Reiniciar" name="reiniciar"><br/><br/>
+			FIREWALL:
+			<input type="submit" value="Iniciar" name="iniciar">
+			<input type="submit" value="Parar" name="parar">
+			<input type="submit" value="Reiniciar" name="reiniciar"><br/><br/>
+			</form>
+		<br/>
+		<hr/>
+		<br/>
+		<h2>Status</h2>
+		<form action="scripts/status.sh" method="post">
+			SERVIÇO:<input type="text" value="Ex.: nagios" name="servico">
+			<input type="submit" value="Ver status">
+		</form>
+		<br/>
+		<hr/>
+		<br/>
+		<h2>Agendar Tarefa</h2>
+		<form>
+			Dia:<input type="text" value="Ex.: 23" name="dia"><br/>
+			Mes:<input type="text" value="Ex.: 10" name="mes"><br/>
+			Ano:<input type="text" value="Ex.: 2018" name="ano"><br/>
+			Hora:<input type="text" value="Ex.: 17" name="hora"><br/>
+			Minuto:<input type="text" value="Ex.: 45" name="minuto"><br/>
+			Comando:<input type="text" value="Ex.: init 6" name="comando"><br/>
+			Descrição:<input type="text" value="Ex.: Reiniciar máquina" name="Descricao"><br/>
+			<input type="submit" value="Agendar">
+		</form>
+		</center>
+	</body>
+</html>
